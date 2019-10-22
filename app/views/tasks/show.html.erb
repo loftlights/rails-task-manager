@@ -1,0 +1,8 @@
+
+<h1><%= @task.title %><%= check_box("tag", tag.id, {checked: @task.completed}) %></h1>
+<p>Details: <%= @task.details %></p>
+<hr>
+
+<%= link_to "Back to all tasks", tasks_path %>
+<%= link_to "Edit task", edit_task_path %>
+<%= link_to "Delete task", task_path(@task), method: :delete %>
